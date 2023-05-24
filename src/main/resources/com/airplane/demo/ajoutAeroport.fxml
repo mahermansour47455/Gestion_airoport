@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="676.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.airplane.demo.AjoutAeroportController">
+   <children>
+      <TableView fx:id="tabAeroport" layoutX="107.0" layoutY="148.0" prefHeight="200.0" prefWidth="442.0">
+         <columns>
+            <TableColumn fx:id="numeroAeroport" prefWidth="75.0" text="Numero" />
+            <TableColumn fx:id="nomaeroport" prefWidth="157.5999755859375" text="NomAeroport" />
+            <TableColumn fx:id="villeaeroport" prefWidth="113.5999755859375" text="Ville" />
+         </columns>
+      </TableView>
+      <TextField fx:id="idNomAeroportt" layoutX="206.0" layoutY="542.0" />
+      <TextField fx:id="idVilleAeroport" layoutX="204.0" layoutY="605.0" />
+      <Button layoutX="227.0" layoutY="650.0" mnemonicParsing="false" onAction="#AjouterAeroport" style="-fx-background-color: #2c75c4;" text="ajouter" textFill="#f4f4f4" />
+      <Text layoutX="204.0" layoutY="528.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom Aeroport" />
+      <Text layoutX="206.0" layoutY="589.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ville Aeroport" />
+      <Text fill="#2c75c4" layoutX="186.0" layoutY="492.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter Aeroport">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Button layoutX="328.0" layoutY="649.0" mnemonicParsing="false" text="Button" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.airplane.demo.VolController">
+   <children>
+      <Pane prefHeight="408.0" prefWidth="174.0" style="-fx-background-color: #0394fc;">
+         <children>
+            <VBox layoutX="33.0" layoutY="170.0" prefHeight="60.0" prefWidth="108.0">
+               <children>
+                  <Button fx:id="AddEscales" mnemonicParsing="false" onAction="#addescale" prefHeight="56.0" prefWidth="114.0" text="Ajouter escale" />
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <GridPane layoutX="205.0" layoutY="36.0" prefHeight="321.0" prefWidth="363.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Aeroport depart" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Aeroport arrive" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Heure depart" GridPane.rowIndex="2" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Heure arrivee" GridPane.rowIndex="3" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date depart" GridPane.rowIndex="4" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date arrivee" GridPane.rowIndex="5" />
+            <TextField fx:id="aeroportDepart" onAction="#addescale" GridPane.columnIndex="1" />
+            <TextField fx:id="aeroportArriver" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="vhdepart" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="vharriver" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <DatePicker fx:id="datedepart" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <DatePicker fx:id="dateArriver" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+      <Pane layoutX="115.0" layoutY="-5.0" prefHeight="38.0" prefWidth="517.0" style="-fx-background-color: #0394fc;">
+         <children>
+            <Text layoutX="174.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter un vol">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="374.0" layoutY="372.0" prefHeight="36.0" prefWidth="217.0" style="-fx-background-color: #0394fc;">
+         <children>
+            <Button fx:id="btnaddvol" layoutX="81.0" layoutY="6.0" mnemonicParsing="false" onAction="#addVol" text="Ajouter" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

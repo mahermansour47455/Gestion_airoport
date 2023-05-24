@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.airplane.demo.ClientController">
+   <children>
+      <Text fill="#2c75c4" layoutX="682.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Espace client">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Text>
+      <Text fill="#2c75c4" layoutX="409.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des vols">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Text>
+      <Text fill="#2c75c4" layoutX="557.0" layoutY="551.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des escales de vol selectionner">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Text>
+      <TableView fx:id="tabEscale" layoutX="555.0" layoutY="577.0" prefHeight="212.0" prefWidth="390.0">
+        <columns>
+          <TableColumn fx:id="AEscale" prefWidth="118.4000244140625" text="Aeroport" />
+          <TableColumn fx:id="HEscale" prefWidth="140.0" text="Heure depart" />
+            <TableColumn fx:id="HAriiver" prefWidth="139.199951171875" text="Heure arrive" />
+        </columns>
+      </TableView>
+      <Text fill="#2c75c4" layoutX="217.0" layoutY="561.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Completer ce formulaire pour Reserver !">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Text>
+      <GridPane layoutX="226.0" layoutY="602.0" prefHeight="129.0" prefWidth="269.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="32.4" minHeight="10.0" prefHeight="19.60001220703125" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="45.19998779296875" minHeight="10.0" prefHeight="45.19998779296875" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nom" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Prenom" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Passport" GridPane.rowIndex="2" />
+            <TextField fx:id="vNom" GridPane.columnIndex="1" />
+            <TextField fx:id="vPrenom" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="Vpassport" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <TableView fx:id="TablVol" layoutX="171.0" layoutY="135.0" prefHeight="352.0" prefWidth="620.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="30.0" text="ID" />
+            <TableColumn fx:id="ColAd" prefWidth="90.0" text="Areport depart" />
+            <TableColumn fx:id="ColAA" prefWidth="103.0" text="Areport arrivee" />
+            <TableColumn fx:id="ColHD" prefWidth="86.0" text="Heure depart" />
+            <TableColumn fx:id="ColHA" prefWidth="82.0" text="Heure arrivee" />
+            <TableColumn fx:id="ColDD" text="Date depart" />
+            <TableColumn fx:id="ColDA" prefWidth="83.0" text="Date arrivee" />
+            <TableColumn fx:id="colEtat" prefWidth="63.0" text="Etat" />
+         </columns>
+      </TableView>
+      <AnchorPane layoutX="-19.0" prefHeight="840.0" prefWidth="170.0" style="-fx-background-color: #154c79;">
+         <children>
+            <GridPane layoutX="24.0" layoutY="91.0" prefHeight="218.0" prefWidth="115.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="0.0" prefWidth="0.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <ImageView fitHeight="66.0" fitWidth="70.0" layoutX="33.0" layoutY="623.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                   <Image url="@../../../icons8-logout-48.png" />
+                </image>
+            </ImageView>
+            <Button fx:id="btn" layoutX="109.0" layoutY="640.0" mnemonicParsing="false" onAction="#Logout" style="-fx-background-color: #154c79;" text="Sortir" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="48.0" fitWidth="45.0" layoutX="45.0" layoutY="696.0" pickOnBounds="true" preserveRatio="true" />
+
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tabReservation" layoutX="962.0" layoutY="135.0" prefHeight="352.0" prefWidth="483.0">
+         <columns>
+            <TableColumn fx:id="IdNomClient" prefWidth="82.4000244140625" text="NomClient" />
+            <TableColumn fx:id="IdPrenomClient" prefWidth="85.5999755859375" text="PrenomClient" />
+            <TableColumn fx:id="IdPassport" minWidth="5.5999755859375" prefWidth="108.7999267578125" text="NumPassport" />
+            <TableColumn fx:id="IdNumVol" prefWidth="75.2001953125" text="NumVol" />
+            <TableColumn fx:id="EtatReservation" minWidth="5.5999755859375" prefWidth="71.9998779296875" text="Etat" />
+            <TableColumn fx:id="Idreservation" minWidth="5.5999755859375" prefWidth="63.2000732421875" text="Id" />
+         </columns>
+      </TableView>
+      <Button layoutX="1008.0" layoutY="615.0" mnemonicParsing="false" onAction="#listerReservation" prefHeight="26.0" prefWidth="170.0" style="-fx-background-color: #2c75c4;" text="Consulter Votre Reservations" textFill="WHITE" />
+      <TextField fx:id="VnumPassport" layoutX="1234.0" layoutY="615.0" />
+      <Text fill="#2c75c4" layoutX="1023.0" layoutY="574.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Si vous Vouler Consulter Vos Reservation entere Votre Num Passport" wrappingWidth="298.08837890625">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Text>
+      <Button layoutX="1008.0" layoutY="741.0" mnemonicParsing="false" onAction="#ConfirmerReservation" style="-fx-background-color: #2c75c4;" text="Confirmer" textFill="WHITE" />
+      <Button layoutX="1135.0" layoutY="741.0" mnemonicParsing="false" onAction="#AnnulerReservation" style="-fx-background-color: crimson;" text="Annuler" textFill="WHITE" />
+      <ImageView fitHeight="59.0" fitWidth="62.0" layoutX="909.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icons8-queue-40.png" />
+         </image>
+      </ImageView>
+      <Text fill="#2c75c4" layoutX="999.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mes Reservation">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="59.0" fitWidth="62.0" layoutX="1325.0" layoutY="712.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icons8-passport-48.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="828.0" layoutY="532.0" mnemonicParsing="false" onAction="#ListerLesEscales" style="-fx-background-color: #2c75c4;" text="lister les escales" textFill="WHITE" />
+      <Text fill="#2c75c4" layoutX="1014.0" layoutY="691.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vous pouvez Anuuler ou confirmer votre Reservation" wrappingWidth="298.08837890625">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="#2c75c4" layoutX="304.0" layoutY="725.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tu peut aussi Modifier Vos donnés " wrappingWidth="250.8984374999999">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Button layoutX="226.0" layoutY="719.0" mnemonicParsing="false" onAction="#btnReserver" style="-fx-background-color: #2c75c4;" text="Reserver" textFill="WHITE" />
+      <Button layoutX="398.0" layoutY="741.0" mnemonicParsing="false" onAction="#ModifierBtn" text="Modifier" />
+   </children>
+</AnchorPane>

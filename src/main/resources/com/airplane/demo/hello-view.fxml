@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.airplane.demo.HelloController">
+   <children>
+      <Button fx:id="ClientBtn" layoutX="999.0" layoutY="469.0" mnemonicParsing="false" onAction="#ClientBtn" style="-fx-background-color: white;" text="Entrer en tant que client" textAlignment="CENTER" textFill="#2c19ff" />
+      <Button fx:id="btnlogin" layoutX="1048.0" layoutY="420.0" mnemonicParsing="false" onAction="#login" style="-fx-background-color: white;" text="Login" textFill="#1660ea">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="password" layoutX="969.0" layoutY="365.0" prefHeight="26.0" prefWidth="221.0" />
+      <Text layoutX="900.0" layoutY="383.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
+      <TextField fx:id="email" layoutX="969.0" layoutY="301.0" prefHeight="26.0" prefWidth="222.0" />
+      <Text layoutX="906.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email :" />
+      <Text fill="#2e77ff" layoutX="896.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcom to our Air Plane Mangment System">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text fill="#1566e7" layoutX="1021.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login form">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="37.0" fitWidth="44.0" layoutX="1053.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icons8-lufthansa-48.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="800.0" fitWidth="652.0" layoutX="-16.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../airplane.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="60.0" fitWidth="65.0" layoutX="1042.0" layoutY="513.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icons8-login-48.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
